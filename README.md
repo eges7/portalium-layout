@@ -1,2 +1,2 @@
-# portalium-template
-Module Template for Portalium
+# portalium-layout
+Module layout for Portalium
