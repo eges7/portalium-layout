@@ -1,6 +1,6 @@
 <?php
 
-namespace portalium\template;
+namespace portalium\layout;
 
 class Module extends \portalium\base\Module
 {
@@ -8,20 +8,20 @@ class Module extends \portalium\base\Module
         [
             'class' => 'yii\rest\UrlRule',
             'controller' => [
-                'template/default',
+                'layout/default',
             ]
         ],
     ];
     
     public static function moduleInit()
     {
-        self::registerTranslation('template','@portalium/template/messages',[
-            'template' => 'template.php',
+        self::registerTranslation('layout','@portalium/layout/messages',[
+            'layout' => 'layout.php',
         ]);
     }
 
     public static function t($message, array $params = [])
     {
-        return parent::coreT('template', $message, $params);
+        return parent::coreT('layout', $message, $params);
     }
 }
